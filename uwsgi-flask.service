@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve Flask app
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=<absolute-path-to-app-work-dir>
+ExecStart=<absolute-path-to-app-work-dir>/.venv/bin/uwsgi --ini uwsgi.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

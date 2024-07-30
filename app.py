@@ -62,6 +62,9 @@ def update_popularity():
     return jsonify({'message': 'Popularity updated successfully', 'new_popularity': new_popularity}), 200
 
 
+@app.route('/status')
+def status():
+    return 'OK'
 
 
 if __name__ == '__main__':

@@ -16,6 +16,8 @@ NetflixMovieCatalog is a simple Flask-based API that provides information about 
     git clone https://github.com/yourusername/NetflixMovieCatalog.git
     cd NetflixMovieCatalog
     ```
+   
+    While changing the `yourusername` to your GitHub account name.
 
 2. Create a Python virtual environment and activate it:
     ```sh

@@ -22,11 +22,11 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > mykey.pem
           chmod 400 mykey.pem
           
-          # Copy the files from the current wrok dir into the EC2 instance, under `~/app`.
-          scp -i mykey.pem -r . ubuntu@$EC2_PUBLIC_IP:~/app
+          # Copy the files from the current work dir into the EC2 instance, under `~/app`.
+          scp -o StrictHostKeyChecking=no -i mykey.pem -r * ubuntu@$EC2_PUBLIC_IP:~/app
           
           # Connect to your EC2 instance and execute the `deploy.sh` script (this script is part of the repo files). 
-          # You need to implement the `deploy.sh` script yourself.
+          # TODO You need to implement the `deploy.sh` script yourself.
           #
           # Upon completion, the NetflixMovieCatalog app should be running with its newer version. 
           # To keep the app running in the background independently on the terminal session you are logging to, configure it as a Linux service.

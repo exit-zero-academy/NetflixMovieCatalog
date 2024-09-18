@@ -23,7 +23,7 @@ jobs:
           chmod 400 Madhav_Day2.pem
           
           # Copy the files from the current work dir into the EC2 instance, under `~/app`.
-          scp -o StrictHostKeyChecking=no -i Madhav_Day2.pem -r * ubuntu@$EC2_PUBLIC_IP:~/app
+          scp -o StrictHostKeyChecking=no -i Madhav_Day2.pem -r * ubuntu@$16.170.223.19:~/app
           
           # Connect to your EC2 instance and execute the `deploy.sh` script (this script is part of the repo files). 
           # TODO You need to implement the `deploy.sh` script yourself.

@@ -23,7 +23,7 @@ jobs:
           chmod 400 Madhav_Day2.pem
           
           # Copy the files from the current work dir into the EC2 instance, under `~/app`.
-          scp -o StrictHostKeyChecking=no -i Madhav_Day2.pem -r * ubuntu@$16.170.223.19:~/app
+          scp -o StrictHostKeyChecking=no -i Madhav_Day2.pem -r * ubuntu@16.170.223.19:~/app
           
           # Connect to your EC2 instance and execute the `deploy.sh` script (this script is part of the repo files). 
           # TODO You need to implement the `deploy.sh` script yourself.
@@ -31,5 +31,5 @@ jobs:
           # Upon completion, the NetflixMovieCatalog app should be running with its newer version. 
           # To keep the app running in the background independently on the terminal session you are logging to, configure it as a Linux service.
     
-          ssh -i Madhav_Day2.pem ubuntu@$16.170.223.19 "bash ~/app/deploy.sh"
+          ssh -i Madhav_Day2.pem ubuntu@16.170.223.19 "bash ~/app/deploy.sh"
           

@@ -20,7 +20,7 @@ jobs:
       - name: SSH to EC2 instance
         run: |
           echo "$SSH_PRIVATE_KEY" > mykey.pem
-          chmod 400 mykey.pem
+          chmod 600 mykey.pem
           
           # Copy the files from the current work dir into the EC2 instance, under `~/app`.
           scp -o StrictHostKeyChecking=no -i mykey.pem -r * ubuntu@$EC2_PUBLIC_IP:~/app

@@ -18,6 +18,11 @@ echo "--------------------------------"
 source venv/bin/activate
 
 echo ""
+echo "Changing to the application directory..."
+echo "--------------------------------"
+cd ~/NetflixMovieCatalog
+
+echo ""
 echo "Checking directory contents..."
 echo "--------------------------------"
 ls -la

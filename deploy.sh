@@ -6,11 +6,11 @@ source .venv/bin/activate
 
 cd ..
 
-sudo systemctl stop simplepy.service
+sudo systemctl stop uwsgi-flask.service
 
-sudo systemctl enable simplepy.service
+sudo systemctl enable uwsgi-flask.service
 
-sudo systemctl start simplepy.service
+sudo systemctl start uwsgi-flask.service
 
 sudo apt update
 

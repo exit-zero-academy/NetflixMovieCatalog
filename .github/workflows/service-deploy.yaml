@@ -40,4 +40,3 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/mykey.pem ubuntu@$EC2_PUBLIC_IP "bash ~/app/deploy.sh"
-          

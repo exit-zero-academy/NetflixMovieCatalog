@@ -1,3 +1,19 @@
-#!/bin/bash
+sudo apt update
 
-# TODO your deploy script implementation...
+cd ./NetflixMovieCatalog
+
+source .venv/bin/activate
+
+cd ..
+
+sudo systemctl stop simplepy.service
+
+sudo systemctl enable simplepy.service
+
+sudo systemctl start simplepy.service
+
+sudo apt update
+
+sudo systemctl start nginx
+
+sudo apt update

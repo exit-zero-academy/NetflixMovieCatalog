@@ -6,12 +6,12 @@ on:
       - main
 
 env:
-  EC2_PUBLIC_IP: X.X.X.X  # TODO replace to your EC2 instance public IP
+  EC2_PUBLIC_IP: ai-spill.devops-days-upes.com  # TODO replace to your EC2 instance public IP
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # TODO define this secret in your GitHub repo settings
 
 jobs:
   Deploy:
-    name: Deploy in EC2
+    name: Deploy in AWS EC2
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the app code

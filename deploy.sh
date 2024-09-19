@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -19,6 +18,11 @@ echo "--------------------------------"
 source venv/bin/activate
 
 echo ""
+echo "Checking directory contents..."
+echo "--------------------------------"
+ls -la
+
+echo ""
 echo "Install Python dependencies..."
 echo "--------------------------------"
 pip install -r requirements.txt
@@ -27,5 +31,3 @@ echo ""
 echo "Starting the Python application..."
 echo "--------------------------------"
 python app.py
-
-# TODO your deploy script implementation...

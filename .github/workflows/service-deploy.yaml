@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  EC2_PUBLIC_IP: ai-yash-nflix.devops-days-upes.com
+  EC2_PUBLIC_IP: ai-yash3-netflix.devops-days-upes.com
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
 jobs:

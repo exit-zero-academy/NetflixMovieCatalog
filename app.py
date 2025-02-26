@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from prometheus_flask_exporter import PrometheusMetrics
 import json
 import random
 
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 
 with open('data/data_tv.json', 'r') as f:
